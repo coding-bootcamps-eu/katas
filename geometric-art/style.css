@@ -1,0 +1,46 @@
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: snow;
+}
+
+.art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80vmin;
+  height: 80vmin;
+
+  border: 1vmin solid #333;
+  border-radius: 1%;
+
+  background-color: #aaa;
+  background-image: linear-gradient(135deg, yellow, yellow 50%, transparent 50%),
+    linear-gradient(#fff, #fff);
+  background-size: 50% 50%, 90% 90%;
+  background-repeat: no-repeat;
+  background-position: 40% 40%, center center;
+}
+
+main:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background-image: linear-gradient(black 50%, transparent 50%);
+  background-size: 100% 10%;
+}
