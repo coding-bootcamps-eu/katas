@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: snow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fake-progress-bar {
+  width: 80vmin;
+  height: 20vmin;
+  border: 1rem solid #6d51c3;
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.fake-progress-bar__item {
+  background-color: #6d51c3;
+  flex-grow: 1;
+}
+
+.fake-progress-bar__item:hover,
+.fake-progress-bar__item:hover ~ * {
+  opacity: 0;
+}
