@@ -1,0 +1,97 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: snow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-radio {
+  --custom-radio-size: 8vmin;
+  --custom-radio-red: 109;
+  --custom-radio-green: 81;
+  --custom-radio-blue: 195;
+  --custom-radio-color: rgb(
+    var(--custom-radio-red),
+    var(--custom-radio-green),
+    var(--custom-radio-blue)
+  );
+  all: unset;
+  position: relative;
+  width: var(--custom-radio-size);
+  height: var(--custom-radio-size);
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.custom-radio:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--custom-radio-color);
+
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.1s, 0.1s;
+  transition-timing-function: ease-out, ease-out;
+}
+
+.custom-radio:checked:before {
+  opacity: 0.9;
+  transform: scale(0.7);
+}
+
+.custom-radio:focus {
+  box-shadow: 0px 0px 0px 2px
+      rgba(
+        var(--custom-radio-red),
+        var(--custom-radio-green),
+        var(--custom-radio-blue),
+        1
+      ),
+    0px 0px 4px
+      rgba(
+        var(--custom-radio-red),
+        var(--custom-radio-green),
+        var(--custom-radio-blue),
+        0.8
+      ),
+    0px 0px 8px
+      rgba(
+        var(--custom-radio-red),
+        var(--custom-radio-green),
+        var(--custom-radio-blue),
+        0.6
+      ),
+    0px 0px 12px
+      rgba(
+        var(--custom-radio-red),
+        var(--custom-radio-green),
+        var(--custom-radio-blue),
+        0.4
+      ),
+    0px 0px 16px
+      rgba(
+        var(--custom-radio-red),
+        var(--custom-radio-green),
+        var(--custom-radio-blue),
+        0.2
+      );
+}
+
+.custom-radio + .custom-radio {
+  margin-left: 5vmin;
+}
