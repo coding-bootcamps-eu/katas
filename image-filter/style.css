@@ -1,0 +1,47 @@
+html {
+  font-size: 32px;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+input {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border: 0.5rem solid black;
+  border-radius: 0.1rem;
+}
+
+img {
+  width: 80vmin;
+  filter: grayscale(var(--grayscale, 0)) sepia(var(--sepia, 0))
+    contrast(var(--contrast, 100%));
+}
+
+.filter-panel {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 1rem;
+}
+
+label {
+  margin-right: 0.5rem;
+}
