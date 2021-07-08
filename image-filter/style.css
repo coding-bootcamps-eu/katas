@@ -1,5 +1,5 @@
 html {
-  font-size: 32px;
+  font-size: calc(1rem + 1vmin);
   font-family: sans-serif;
 }
 
