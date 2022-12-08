@@ -17,6 +17,7 @@ main.addEventListener("click", increaseCounter);
 
 function resetCounter() {
   counter = 0;
+  colorCounter = 0;
   label.innerText = counter;
   main.style.setProperty("--counter", 0 + "%");
   button.blur();
