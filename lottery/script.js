@@ -9,7 +9,12 @@ Vue.createApp({
       this.numbers.length = 0;
     },
     addNumber() {
-      this.numbers.push(getRandomNumber(1, 49));
+      const n = getRandomNumber(1, 49);
+      if (!this.numbers.includes(n)) {
+        this.numbers.push(n);
+        return;
+      }
+      this.addNumber();
     },
   },
   computed: {
@@ -18,6 +23,9 @@ Vue.createApp({
     },
     allowAdd() {
       return this.numbers.length === 6;
+    },
+    sortedNumbers() {
+      return this.numbers.sort((a, b) => a - b);
     },
   },
 }).mount("#app");

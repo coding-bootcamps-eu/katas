@@ -17,7 +17,7 @@
         <button @click="reset" :disabled="allowReset">Reset</button>
       </div>
       <div class="numbers">
-        <div class="number" v-for="number in numbers">{{number}}</div>
+        <div class="number" v-for="number in sortedNumbers">{{number}}</div>
       </div>
     </main>
     <script src="https://unpkg.com/vue@next"></script>
