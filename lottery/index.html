@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata - Lotto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <div class="controls">
+        <h1>Lottery Number Picker</h1>
+        <button @click="addNumber" :disabled="allowAdd">
+          Pick random Number
+        </button>
+        <button @click="reset" :disabled="allowReset">Reset</button>
+      </div>
+      <div class="numbers">
+        <div class="number" v-for="number in numbers">{{number}}</div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
