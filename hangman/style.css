@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=VT323");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "VT323";
+  background-color: #111;
+}
+
+button {
+  all: unset;
+  font-family: "VT323";
+  text-align: center;
+}
+
+.hangman {
+  display: flex;
+  flex-direction: column;
+  width: 90vmin;
+  height: 60vmin;
+  border: 2vmin solid white;
+  background-color: white;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  font-size: 5vmin;
+  border-bottom: 1px solid black;
+}
+
+.game-state {
+  padding: 2vmin 2vmin;
+  border-right: 1px solid black;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.game-state__text.active {
+  color: black;
+}
+
+.game-state__text.win {
+  color: green;
+  animation: blink 0.5s steps(3, end) infinite;
+}
+
+.game-state__text.fail {
+  color: red;
+  animation: blink 0.5s steps(3, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.new-game {
+  padding: 2vmin 2vmin;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.new-game:hover {
+  background-color: lightgrey;
+}
+
+.new-game:focus {
+  outline: 0;
+}
+
+.fails {
+  flex-grow: 1;
+  font-size: 5vmin;
+  text-align: center;
+  padding: 2vmin 2vmin;
+  border-right: 1px solid black;
+}
+
+.word {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  margin: 5vmin 0;
+  height: 10vmin;
+}
+
+.letter {
+  padding-right: 0.5vmin;
+}
+
+.keyboard {
+  display: grid;
+  font-size: 5vmin;
+  grid-template-columns: repeat(13, 1fr);
+  grid-gap: 0.1rem;
+}
+
+.key {
+  all: unset;
+  display: block;
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.key[disabled] {
+  opacity: 0.5;
+  cursor: unset;
+  border-style: dotted;
+}
+
+.key:not([disabled]):hover {
+  background-color: lightgrey;
+}
+
+.key--fade-out {
+  pointer-events: none;
+  color: rgba(black, 0.2);
+}

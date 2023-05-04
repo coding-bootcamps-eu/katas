@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman<</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <div class="hangman">
+        <div class="menu">
+          <div class="game-state">
+            <span class="game-state__text" :class="gameState"
+              >{{gameState}}</span
+            >
+          </div>
+          <div class="fails" :style="failsStyle">FAILS: {{fails}}/10</div>
+          <button class="new-game" @click="startGame()">NEW GAME</button>
+        </div>
+        <div class="word">
+          <div v-for="letter in letters" class="letter">{{letter}}</div>
+        </div>
+        <div class="keyboard">
+          <button
+            v-for="key in keys"
+            @click="guess(key)"
+            class="key"
+            :disabled="hasBeenUsed(key)"
+          >
+            {{key}}
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
