@@ -1,0 +1,99 @@
+:root {
+  /* CSS HEX */
+  --rose: #f72585ff;
+  --grape: #7209b7ff;
+  --zaffre: #3a0ca3ff;
+  --neon-blue: #4361eeff;
+  --vivid-sky-blue: #4cc9f0ff;
+
+  font-size: clamp(1rem, 5vw, 4rem);
+  color: white;
+  font-family: sans-serif, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  background: hsla(303, 100%, 50%, 1);
+
+  background: hsla(333, 93%, 56%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(333, 93%, 56%, 1) 0%,
+    hsla(276, 91%, 38%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(333, 93%, 56%, 1) 0%,
+    hsla(276, 91%, 38%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(333, 93%, 56%, 1) 0%,
+    hsla(276, 91%, 38%, 1) 100%
+  );
+}
+
+menu {
+  margin-top: 1em;
+  width: 100%;
+}
+
+menu > * {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+menu > * > * {
+  flex-grow: 0;
+}
+
+@media screen and (min-width: 720px) {
+  menu > * {
+    font-size: 0.7em;
+    flex-direction: row;
+  }
+}
+
+/* menu button + button {
+  margin-left: 1em;
+} */
+
+button {
+  all: unset;
+  color: white;
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.2 s ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+p {
+  font-size: 3em;
+  align-self: center;
+  justify-self: center;
+}
