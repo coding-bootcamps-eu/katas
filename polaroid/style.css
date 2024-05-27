@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: "Nothing You Could Do";
+  font-family: 'Nothing You Could Do';
 }
 
 *,
@@ -36,7 +36,8 @@ body {
   height: 80%;
   margin: 5%;
   margin-bottom: 2.5%;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/448976/berlin.jpg")
+  /* image url is deprecated */
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/448976/berlin.jpg')
     center center no-repeat;
   background-size: cover;
   border-radius: 0.1rem;
